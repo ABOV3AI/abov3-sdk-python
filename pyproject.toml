@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "abov3-ai"
 version = "0.1.0"
-description = "Official Python SDK for ABOV3 AI - Advanced Code Generation Framework"
+description = "Official Python SDK for ABOV3 AI - Genesis CodeForger Edition"
 readme = "README.md"
 authors = [
     {name = "ABOV3 Team", email = "support@abov3.ai"}

@@ -1,10 +1,13 @@
-# ABOV3 AI Python SDK
+# ABOV3 Python SDK - Genesis CodeForger Edition
 
 [![PyPI version](https://img.shields.io/pypi/v/abov3-ai.svg)](https://pypi.org/project/abov3-ai/)
 [![Python versions](https://img.shields.io/pypi/pyversions/abov3-ai.svg)](https://pypi.org/project/abov3-ai/)
 [![Documentation](https://img.shields.io/badge/docs-abov3.ai-blue)](https://docs.abov3.ai)
 
-The official Python SDK for **ABOV3 AI** - the advanced code generation and AI development framework.
+The official Python SDK for **ABOV3 AI** - Genesis CodeForger Edition.
+
+**Official Website:** [https://www.abov3.ai](https://www.abov3.ai)
+**ABOV3 Team:** [https://www.abov3.com](https://www.abov3.com)
 
 ## Installation
 
