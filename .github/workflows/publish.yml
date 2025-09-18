@@ -88,5 +88,6 @@ jobs:
       with:
         repository-url: https://test.pypi.org/legacy/
         skip-existing: true  # Don't fail if package version already exists
-        # Relies on trusted publishing (OIDC)
-        # No password/token needed when properly configured
+        # Uses trusted publishing (OIDC) if configured on Test PyPI
+        # Falls back to token if provided (optional)
+        password: ${{ secrets.TEST_PYPI_API_TOKEN || '' }}
