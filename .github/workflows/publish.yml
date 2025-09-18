@@ -49,6 +49,7 @@ jobs:
       url: https://pypi.org/p/abov3-ai
     permissions:
       id-token: write  # For trusted publishing
+      contents: read
 
     steps:
     - name: Download artifacts
@@ -62,8 +63,7 @@ jobs:
       with:
         # Use API token if trusted publishing is not set up
         password: ${{ secrets.PYPI_API_TOKEN }}
-        # Or use trusted publishing (recommended)
-        # No password needed if trusted publishing is configured
+        skip-existing: true  # Don't fail if package version already exists
 
   publish-to-test-pypi:
     needs: build
@@ -72,6 +72,9 @@ jobs:
     environment:
       name: test-pypi
       url: https://test.pypi.org/p/abov3-ai
+    permissions:
+      id-token: write  # Required for trusted publishing
+      contents: read
 
     steps:
     - name: Download artifacts
@@ -84,4 +87,6 @@ jobs:
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
         repository-url: https://test.pypi.org/legacy/
+        # Try trusted publishing first, fallback to token if not configured
         password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+        skip-existing: true  # Don't fail if package version already exists
