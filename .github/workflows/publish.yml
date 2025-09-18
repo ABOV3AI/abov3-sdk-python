@@ -87,6 +87,6 @@ jobs:
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
         repository-url: https://test.pypi.org/legacy/
-        # Try trusted publishing first, fallback to token if not configured
-        password: ${{ secrets.TEST_PYPI_API_TOKEN }}
         skip-existing: true  # Don't fail if package version already exists
+        # Relies on trusted publishing (OIDC)
+        # No password/token needed when properly configured
