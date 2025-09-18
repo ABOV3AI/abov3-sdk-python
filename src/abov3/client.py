@@ -34,6 +34,7 @@ class Abov3Client:
             raise Abov3Error("API key is required. Set ABOV3_API_KEY or pass api_key parameter.")
 
         self.base_url = base_url or os.getenv("ABOV3_BASE_URL", "https://api.abov3.ai")
+        assert self.base_url is not None  # Type hint for mypy
 
         # Setup HTTP client
         self._client = httpx.AsyncClient(
@@ -64,23 +65,32 @@ class Abov3Client:
     ) -> httpx.Response:
         """Make an HTTP request to the API."""
         retries = 0
+        last_exception: Optional[Exception] = None
+
         while retries <= self.max_retries:
             try:
                 response = await self._client.request(method, path, **kwargs)
                 response.raise_for_status()
                 return response
             except httpx.HTTPStatusError as e:
+                last_exception = e
                 if retries < self.max_retries and e.response.status_code in [429, 503]:
                     retries += 1
                     # Simple exponential backoff
                     await httpx.AsyncClient().aclose()  # Small delay
                     continue
                 raise
-            except Exception:
+            except Exception as e:
+                last_exception = e
                 if retries < self.max_retries:
                     retries += 1
                     continue
                 raise
+
+        # This should never be reached, but satisfies mypy
+        if last_exception:
+            raise last_exception
+        raise Abov3Error("Maximum retries exceeded")
 
     async def close(self):
         """Close the HTTP client."""

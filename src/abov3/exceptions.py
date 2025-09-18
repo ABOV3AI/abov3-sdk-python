@@ -1,5 +1,7 @@
 """Exception classes for ABOV3 AI SDK"""
 
+from typing import Optional
+
 
 class Abov3Error(Exception):
     """Base exception for all ABOV3 SDK errors."""
@@ -9,7 +11,7 @@ class Abov3Error(Exception):
 class APIError(Abov3Error):
     """Error from the ABOV3 API."""
 
-    def __init__(self, message: str, status_code: int = None, response_body: dict = None):
+    def __init__(self, message: str, status_code: Optional[int] = None, response_body: Optional[dict] = None):
         super().__init__(message)
         self.status_code = status_code
         self.response_body = response_body
