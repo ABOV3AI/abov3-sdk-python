@@ -1,7 +1,7 @@
 """ABOV3 AI Client implementation"""
 
 import os
-from typing import Optional, Dict, Any
+from typing import Optional, Dict
 import httpx
 from .resources import Sessions, Messages, Files, Agents, Projects
 from .exceptions import Abov3Error
@@ -76,7 +76,7 @@ class Abov3Client:
                     await httpx.AsyncClient().aclose()  # Small delay
                     continue
                 raise
-            except Exception as e:
+            except Exception:
                 if retries < self.max_retries:
                     retries += 1
                     continue
