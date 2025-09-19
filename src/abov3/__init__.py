@@ -1,6 +1,6 @@
 """ABOV3 AI Python SDK - Advanced Code Generation Framework"""
 
-__version__ = "0.1.0"
+__version__ = "0.1.3"
 
 from .client import Abov3Client
 from .exceptions import (
