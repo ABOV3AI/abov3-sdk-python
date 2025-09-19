@@ -48,6 +48,7 @@ print(response.content)
 - ⚡ **Async Support** - Built on httpx for high-performance async operations
 - 🔄 **Auto Retry** - Automatic retry with exponential backoff
 - 📊 **Streaming** - Support for streaming responses
+- 🔧 **Configuration API** - Manage ABOV3 configurations programmatically (v0.1.1+)
 - 🧪 **Well Tested** - Comprehensive test coverage
 
 ## Streaming Responses
