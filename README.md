@@ -41,6 +41,22 @@ response = await client.messages.create(
 print(response.content)
 ```
 
+## What's New in v0.1.4
+
+### TUI Configuration Management
+The TUI now includes comprehensive configuration management commands:
+- Interactive configuration dialogs with form inputs
+- Provider management (add, edit, enable/disable, remove)
+- MCP server configuration
+- System health checks and validation
+- Scrollable configuration viewer
+
+### Features Update
+- Real-time configuration updates
+- Form-based input for adding providers and MCP servers
+- Health diagnostics with `config doctor` command
+- Configuration validation with detailed error reporting
+
 ## Features
 
 - 🚀 **Full API Coverage** - Complete access to all ABOV3 AI capabilities
