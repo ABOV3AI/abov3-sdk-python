@@ -9,6 +9,14 @@ on:
         description: 'Version to publish (e.g., 0.1.5)'
         required: true
         type: string
+      environment:
+        description: 'Publish to test or production PyPI'
+        required: true
+        type: choice
+        options:
+          - test
+          - production
+        default: test
 
 jobs:
   build-and-publish:
@@ -42,12 +50,23 @@ jobs:
     - name: Check package
       run: twine check dist/*
 
-    - name: Publish to PyPI
+    - name: Publish to TestPyPI
+      if: github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'test'
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
+      run: |
+        twine upload --repository testpypi dist/*
+        echo "Package published to https://test.pypi.org/project/abov3-ai/"
+
+    - name: Publish to PyPI (Production)
+      if: github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'production')
       env:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
       run: |
         twine upload dist/*
+        echo "Package published to https://pypi.org/project/abov3-ai/"
 
     - name: Create version tag if manually triggered
       if: github.event_name == 'workflow_dispatch'
