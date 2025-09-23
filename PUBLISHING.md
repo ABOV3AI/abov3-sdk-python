@@ -16,7 +16,7 @@ This guide explains how to publish the ABOV3 Python SDK to PyPI and Test PyPI.
 Before publishing, ensure you have:
 1. A [PyPI account](https://pypi.org/account/register/)
 2. A [Test PyPI account](https://test.pypi.org/account/register/) (optional, for testing)
-3. Repository admin access to [fajardofahad/abov3-sdk-python](https://github.com/fajardofahad/abov3-sdk-python)
+3. Repository admin access to [fajardofahad/abov3-sdk-python](https://github.com/ABOV3AI/abov3-sdk-python)
 
 ## Publishing Methods
 
@@ -61,7 +61,7 @@ The SDK supports two authentication methods for publishing:
    - Copy the token (starts with `pypi-`)
 
 2. **Add to GitHub Secrets**:
-   - Go to https://github.com/fajardofahad/abov3-sdk-python/settings/secrets/actions
+   - Go to https://github.com/ABOV3AI/abov3-sdk-python/settings/secrets/actions
    - Click "New repository secret"
    - Name: `PYPI_API_TOKEN`
    - Value: Your PyPI token
@@ -95,7 +95,7 @@ The SDK supports two authentication methods for publishing:
    - Copy the token
 
 2. **Add to GitHub Secrets**:
-   - Go to https://github.com/fajardofahad/abov3-sdk-python/settings/secrets/actions
+   - Go to https://github.com/ABOV3AI/abov3-sdk-python/settings/secrets/actions
    - Click "New repository secret"
    - Name: `TEST_PYPI_API_TOKEN`
    - Value: Your Test PyPI token
@@ -117,7 +117,7 @@ git push origin v0.1.0
 
 ### Manual Publishing
 
-1. **Go to Actions**: https://github.com/fajardofahad/abov3-sdk-python/actions
+1. **Go to Actions**: https://github.com/ABOV3AI/abov3-sdk-python/actions
 
 2. **Select "Publish to PyPI" workflow**
 
@@ -260,6 +260,6 @@ Settings → Environments → [environment name] → Protection rules
 ## Support
 
 For issues or questions:
-- **GitHub Issues**: https://github.com/fajardofahad/abov3-sdk-python/issues
+- **GitHub Issues**: https://github.com/ABOV3AI/abov3-sdk-python/issues
 - **ABOV3 Support**: support@abov3.ai
 - **Documentation**: https://docs.abov3.ai

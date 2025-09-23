@@ -174,7 +174,7 @@ await client.files.delete(file_id)
 
 ```bash
 # Clone the repository
-git clone https://github.com/fajardofahad/abov3-sdk-python.git
+git clone https://github.com/ABOV3AI/abov3-sdk-python.git
 cd abov3-sdk-python
 
 # Install development dependencies
@@ -195,8 +195,8 @@ mypy src
 
 - **Documentation**: [https://docs.abov3.ai](https://docs.abov3.ai)
 - **Website**: [https://www.abov3.ai](https://www.abov3.ai)
-- **GitHub**: [https://github.com/fajardofahad/abov3-sdk-python](https://github.com/fajardofahad/abov3-sdk-python)
-- **Issues**: [GitHub Issues](https://github.com/fajardofahad/abov3-sdk-python/issues)
+- **GitHub**: [https://github.com/ABOV3AI/abov3-sdk-python](https://github.com/ABOV3AI/abov3-sdk-python)
+- **Issues**: [GitHub Issues](https://github.com/ABOV3AI/abov3-sdk-python/issues)
 
 ## License
 
