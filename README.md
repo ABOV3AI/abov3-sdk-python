@@ -41,7 +41,14 @@ response = await client.messages.create(
 print(response.content)
 ```
 
-## What's New in v0.1.4
+## What's New in v0.1.9
+
+### Repository Migration
+- Migrated from personal repository to official ABOV3AI organization
+- Updated all documentation URLs to point to https://www.abov3.ai/docs
+- Improved publishing workflow with GitHub Actions
+
+## Previous Updates (v0.1.4)
 
 ### TUI Configuration Management
 The TUI now includes comprehensive configuration management commands:
