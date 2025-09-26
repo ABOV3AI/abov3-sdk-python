@@ -262,4 +262,4 @@ Settings → Environments → [environment name] → Protection rules
 For issues or questions:
 - **GitHub Issues**: https://github.com/ABOV3AI/abov3-sdk-python/issues
 - **ABOV3 Support**: support@abov3.ai
-- **Documentation**: https://docs.abov3.ai
+- **Documentation**: https://www.abov3.ai/docs/index.html

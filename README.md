@@ -2,7 +2,7 @@
 
 [![PyPI version](https://img.shields.io/pypi/v/abov3-ai.svg)](https://pypi.org/project/abov3-ai/)
 [![Python versions](https://img.shields.io/pypi/pyversions/abov3-ai.svg)](https://pypi.org/project/abov3-ai/)
-[![Documentation](https://img.shields.io/badge/docs-abov3.ai-blue)](https://docs.abov3.ai)
+[![Documentation](https://img.shields.io/badge/docs-abov3.ai-blue)](https://www.abov3.ai/docs/index.html)
 
 The official Python SDK for **ABOV3 AI** - Genesis CodeForger Edition.
 
@@ -193,7 +193,7 @@ mypy src
 
 ## Support
 
-- **Documentation**: [https://docs.abov3.ai](https://docs.abov3.ai)
+- **Documentation**: [https://www.abov3.ai/docs/index.html](https://www.abov3.ai/docs/index.html)
 - **Website**: [https://www.abov3.ai](https://www.abov3.ai)
 - **GitHub**: [https://github.com/ABOV3AI/abov3-sdk-python](https://github.com/ABOV3AI/abov3-sdk-python)
 - **Issues**: [GitHub Issues](https://github.com/ABOV3AI/abov3-sdk-python/issues)

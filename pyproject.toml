@@ -43,7 +43,7 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://www.abov3.ai"
-Documentation = "https://docs.abov3.ai"
+Documentation = "https://www.abov3.ai/docs/index.html"
 Repository = "https://github.com/ABOV3AI/abov3-sdk-python"
 Issues = "https://github.com/ABOV3AI/abov3-sdk-python/issues"
 
