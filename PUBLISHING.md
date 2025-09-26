@@ -16,7 +16,7 @@ This guide explains how to publish the ABOV3 Python SDK to PyPI and Test PyPI.
 Before publishing, ensure you have:
 1. A [PyPI account](https://pypi.org/account/register/)
 2. A [Test PyPI account](https://test.pypi.org/account/register/) (optional, for testing)
-3. Repository admin access to [fajardofahad/abov3-sdk-python](https://github.com/ABOV3AI/abov3-sdk-python)
+3. Repository admin access to [ABOV3AI/abov3-sdk-python](https://github.com/ABOV3AI/abov3-sdk-python)
 
 ## Publishing Methods
 
@@ -45,7 +45,7 @@ The SDK supports two authentication methods for publishing:
 3. **Configure the Publisher**:
    ```
    PyPI Project Name: abov3-ai
-   Repository owner: fajardofahad
+   Repository owner: ABOV3AI
    Repository name: abov3-sdk-python
    Workflow name: publish.yml
    Environment name: pypi
@@ -79,7 +79,7 @@ The SDK supports two authentication methods for publishing:
 3. **Configure the Publisher**:
    ```
    PyPI Project Name: abov3-ai
-   Repository owner: fajardofahad
+   Repository owner: ABOV3AI
    Repository name: abov3-sdk-python
    Workflow name: publish.yml
    Environment name: test-pypi
@@ -176,7 +176,7 @@ For testing and pre-releases:
 
 **Solution**:
 - Ensure the publisher configuration on PyPI matches exactly:
-  - Repository: `fajardofahad/abov3-sdk-python`
+  - Repository: `ABOV3AI/abov3-sdk-python`
   - Workflow: `publish.yml`
   - Environment: `pypi` or `test-pypi`
 
